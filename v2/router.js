@@ -15,13 +15,13 @@ const webhooks = require("./routes/facebookWebhook.route");
 const router = express.Router();
 const limiter = new RateLimit(config.express.limiter);
 router
+  .use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }))
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json({ limit: "10mb" }))
   .use(limiter)
   .use(cors())
   .use(compression())
-  .use(helmet())
-  .use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
+  .use(helmet());
 
 router.use("/webhooks", webhooks);
 

@@ -3,7 +3,6 @@ const router = express.Router();
 const HttpStatus = require("http-status-codes");
 const asyncHandler = require("express-async-handler");
 
-const globals = require("../constants/globals.constant");
 router.get(
   "/",
   [],
