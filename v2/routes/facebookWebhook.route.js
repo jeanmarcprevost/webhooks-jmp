@@ -12,7 +12,7 @@ router.get(
     if (challenge === null) {
       throw new Error("HUB.CHALLENGE NOT FOUND");
     }
-    return res.status(HttpStatus.OK).json(challenge);
+    return res.status(HttpStatus.OK).send(challenge);
   })
 );
 
