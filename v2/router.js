@@ -5,13 +5,11 @@ const cors = require("cors");
 const RateLimit = require("express-rate-limit");
 const bodyParser = require("body-parser");
 const HttpStatus = require("http-status-codes");
-const moment = require("moment");
-const hub = require("express-x-hub")
+const xhub = require("express-x-hub")
 
 require("dotenv").config({ path: "../.env" });
 
 const config = require("./config");
-const globals = require("./constants/globals.constant");
 const webhooks = require("./routes/facebookWebhook.route");
 
 const router = express.Router();

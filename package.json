@@ -1,5 +1,5 @@
 {
-  "name": "vz-zodiac",
+  "name": "vz-webhook",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -18,12 +18,10 @@
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-register": "^6.26.0",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-x-hub": "^1.0.4",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.5"
   },
-  "devDependencies": {
-    "jest": "^24.9.0"
-  }
+  "devDependencies": {}
 }
