@@ -23,6 +23,7 @@ router.get(
 );
 
 router.post('/', async (req, res) => {
+  console.log('Header:', req.header('X-Hub-Signature');
   console.log('Facebook request body:', req.body.entry[0].changes);
 
   console.log('here update');
