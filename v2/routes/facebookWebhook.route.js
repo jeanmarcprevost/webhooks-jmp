@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 
   console.log('here update');
   // Process the Facebook updates here
-  res.sendStatus(200);
+  res.sendStatus(HttpStatus.OK);
 });
 
 

@@ -21,7 +21,7 @@ router
   .use(cors())
   .use(compression())
   .use(helmet())
-  .user(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
+  .use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
 
 router.use("/webhooks", webhooks);
 
