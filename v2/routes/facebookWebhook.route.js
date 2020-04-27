@@ -23,7 +23,7 @@ router.get(
 );
 
 router.post('/', async (req, res) => {
-  console.log('Facebook request body:', req.body.entry);
+  console.log('Facebook request body:', req.body.entry[0].changes);
 
   console.log('here update');
   // Process the Facebook updates here
