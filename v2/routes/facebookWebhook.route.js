@@ -12,18 +12,18 @@ router.get(
     if (challenge === null) {
       throw new Error("HUB.CHALLENGE NOT FOUND");
     }
+
+    const token = req.query["hub.verify_token"] ? req.query["hub.verify_token"] : null;
+    if (token === null) {
+      throw new Error("HUB.TOKEN NOT FOUND");
+    }
+
     return res.status(HttpStatus.OK).send(challenge);
   })
 );
 
 router.post('/', async (req, res) => {
-  console.log('Facebook request body:', req.body);
-  console.log('Facebook request query:', req.query);
-  const token = req.query["hub.verify_token"] ? req.query["hub.verify_token"] : null;
-
-  if (token === null) {
-    throw new Error("HUB.TOKEN NOT FOUND");
-  }
+  console.log('Facebook request body:', req.body,entry.changes);
 
   console.log('here update');
   // Process the Facebook updates here
