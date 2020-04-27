@@ -1,0 +1,28 @@
+{
+  "name": "vz-zodiac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "start:local": "nodemon -i app.js",
+    "scalingo-postbuild": "cd ./v2 ; npm install --prefix ./;cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanmarcprevost/webhooks-jmp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
