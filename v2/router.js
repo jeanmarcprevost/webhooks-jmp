@@ -6,6 +6,7 @@ const RateLimit = require("express-rate-limit");
 const bodyParser = require("body-parser");
 const HttpStatus = require("http-status-codes");
 const moment = require("moment");
+const hub = require("express-x-hub")
 
 require("dotenv").config({ path: "../.env" });
 
@@ -21,7 +22,8 @@ router
   .use(limiter)
   .use(cors())
   .use(compression())
-  .use(helmet());
+  .use(helmet())
+  .user(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
 
 router.use("/webhooks", webhooks);
 

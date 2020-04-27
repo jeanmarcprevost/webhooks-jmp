@@ -23,7 +23,9 @@ router.get(
 );
 
 router.post('/', async (req, res) => {
-  console.log('Header:', req.header('X-Hub-Signature'));
+  if (!req.isXHubValid()) {
+    throw new Error("X-HUB NOT VALID");
+  }
   console.log('Facebook request body:', req.body.entry[0].changes);
 
   console.log('here update');
