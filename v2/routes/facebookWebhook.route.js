@@ -7,7 +7,7 @@ const globals = require("../constants/globals.constant");
 router.get(
   "/",
   [],
-  asyncHandler(async (req, res, next) => {
+  asyncHandler(async (req, res) => {
     const challenge = req.query["hub.challenge"] ? req.query["hub.challenge"] : null;
     if (challenge === null) {
       throw new Error("HUB.CHALLENGE NOT FOUND");
@@ -16,6 +16,19 @@ router.get(
   })
 );
 
+router.post('/', async (req, res) => {
+  console.log('Facebook request body:', req.body);
+  const token = req.query["hub.verify_token"] ? req.query["hub.verify_token"] : null;
+
+  if (token === null) {
+    throw new Error("HUB.TOKEN NOT FOUND");
+  }
+
+  console.log('here update');
+  // Process the Facebook updates here
+  received_updates.unshift(req.body);
+  res.sendStatus(200);
+});
 
 
 
