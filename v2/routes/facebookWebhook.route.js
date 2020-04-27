@@ -18,6 +18,7 @@ router.get(
 
 router.post('/', async (req, res) => {
   console.log('Facebook request body:', req.body);
+  console.log('Facebook request query:', req.query);
   const token = req.query["hub.verify_token"] ? req.query["hub.verify_token"] : null;
 
   if (token === null) {
