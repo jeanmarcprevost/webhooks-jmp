@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node app.js",
     "start:local": "nodemon -i app.js",
-    "scalingo-postbuild": "cd ./v2 ; npm install --prefix ./;cd .."
+    "heroku-postbuild": "cd ./v2; npm install --prefix ./; cd .."
   },
   "repository": {
     "type": "git",
