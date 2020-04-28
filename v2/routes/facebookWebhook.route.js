@@ -32,6 +32,4 @@ router.post('/', async (req, res) => {
   res.sendStatus(HttpStatus.OK);
 });
 
-
-
 module.exports = router;
