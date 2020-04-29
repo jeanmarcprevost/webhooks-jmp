@@ -3,6 +3,8 @@
 [Doc Facebook](https://developers.facebook.com/docs/graph-api/webhooks/getting-started#create-endpoint)  
 [Exemple de  code de webhook](https://github.com/fbsamples/graph-api-webhooks-samples/blob/master/heroku/index.js])
 
+[Url serveur de test sur heroku](https://webhook-jmp.herokuapp.com/v2/webhooks)
+
 ## Configuration de l'application facebook
 
 #### Ajouter un produit de type webhook
@@ -46,7 +48,7 @@ GET https://www.your-clever-domain-name.com/webhooks?
 
 Les infos à traiter sont dans ````changes````, un tableau regroupant plusieurs modifications (jusqu'à 1000)
 
-## PArticularité : Webhook pour les pages
+## Particularité : Webhook pour les pages
 [Docs Facebook Webhook Page](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-pages)
 
 #### Installation de l'application sur la page
