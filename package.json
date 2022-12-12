@@ -19,7 +19,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-register": "^6.26.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-x-hub": "^1.0.4",
     "http-status-codes": "^1.4.0",
     "request-promise": "^4.2.5"
